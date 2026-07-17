@@ -1,0 +1,6 @@
+{
+  "name": "Email to Inquiry Parser",
+  "description": "Extract and organize structured business inquiry data from unstructured emails using Gemini AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
