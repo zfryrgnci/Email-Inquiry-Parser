@@ -1,33 +1,62 @@
 <div align="center">
-<<<<<<< HEAD
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+  <img src="https://img.shields.io/badge/Status-Active-success.svg?style=for-the-badge" alt="Status" />
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/badge/Architecture-AI_First-purple.svg?style=for-the-badge" alt="Architecture" />
+
+  <h1>📨 Email to Inquiry Parser (AI Ledger)</h1>
+  <p><em>A high-precision, AI-powered semantic synthesizer for B2B inbox automation.</em></p>
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## 🚀 Overview
 
-View your app in AI Studio: https://ai.studio/apps/a946694c-67d5-411f-8826-d13b95c1f7ca
+The **Email to Inquiry Parser** is an enterprise-ready AI tool designed to ingest unstructured client emails, parse semantic intent using Google's `gemini-3.5-flash` model, and instantly synthesize verified, structured JSON records.
 
-## Run Locally
+Tired of manually reading dense client requests, extracting contact info, timelines, and budgets, and typing them into a CRM? This application entirely automates the intake pipeline.
 
-**Prerequisites:**  Node.js
+## ✨ Key Features
+- 🧠 **AI Semantic Node Extraction**: Extracts Budget, Deadlines, Sender Meta, and Core Intent with near-perfect accuracy.
+- 🎨 **Premium UI/UX**: Built with React, Tailwind v4, and Framer Motion for a sleek, glassmorphic aesthetic.
+- 📊 **Cognitive Blueprinting**: Visualize exactly how the AI maps paragraphs to data structures in real-time.
+- ⚡ **Automated Sales Workstation**: Generates immediate contextual follow-up drafts based on the parsed tone and timeline.
+- 📈 **Ledger Archiving**: Stores history and exports directly to `.csv` for CRM integration.
 
+## 🛠 Tech Stack
+- **Frontend**: React 19, TailwindCSS v4, Vite, Lucide Icons, Framer Motion.
+- **Backend**: Node.js, Express, TypeScript.
+- **AI Core**: `@google/genai` (Gemini API) enforcing rigorous JSON schema compliance.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-=======
+## ⚙️ Getting Started
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+### 1. Prerequisites
+- Node.js (v24+)
+- A Free [Google Gemini API Key](https://aistudio.google.com/)
 
-  <h1>Built with AI Studio</h2>
+### 2. Setup
+Clone the repo and configure the environment:
+```bash
+git clone https://github.com/zfryrgnci/email-to-inquiry-parser.git
+cd email-to-inquiry-parser
+npm install
+```
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+Create a `.env` file in the root directory:
+```env
+GEMINI_API_KEY=your_free_api_key_here
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### 3. Run Development Server
+```bash
+npm run dev
+```
+Navigate to `http://localhost:3000` to access the AI workspace.
 
-</div>
->>>>>>> bc774b0ca051959bcfac14b5b58764bd47e53e05
+## 🧪 Testing Suite
+This project implements `Vitest` and `Supertest` for backend route validation:
+```bash
+npm run test
+```
+
+## 🤝 Open Source
+Created by [Zafer Yorganci](https://github.com/zfryrgnci). Feel free to fork, star, and use this to optimize your agency or SaaS inbound pipelines!

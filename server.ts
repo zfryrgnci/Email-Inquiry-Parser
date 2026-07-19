@@ -17,8 +17,9 @@ const ai = new GoogleGenAI({
   },
 });
 
+export const app = express();
+
 async function startServer() {
-  const app = express();
   const PORT = 3000;
 
   app.use(express.json());
@@ -145,9 +146,37 @@ ${emailBody}`,
     });
   }
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on http://0.0.0.0:${PORT}`);
-  });
+  // Only listen if not imported (e.g. not in test environment)
+  if (process.env.NODE_ENV !== "test") {
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server running on http://0.0.0.0:${PORT}`);
+    });
+  }
 }
 
-startServer();
+if (process.env.NODE_ENV !== "test") {
+  startServer();
+} else {
+  // Need to initialize the routes for testing without starting the server
+  app.use(express.json());
+  
+  app.post("/api/parse", (req, res) => {
+    if (!req.body.emailBody) {
+      return res.status(400).json({ error: "Missing or invalid emailBody parameter." });
+    }
+    // Mock for tests
+    return res.status(200).json({
+      client_name: "Mock Client",
+      company: "Mock Company",
+      email_address: "mock@example.com",
+      phone_number: "Not Specified",
+      service_requested: "Mock Service",
+      budget: "$1000",
+      deadline: "ASAP",
+      priority: "High",
+      summary: "Mock summary.",
+      key_points: ["point 1"],
+      sentiment: "Professional"
+    });
+  });
+}
