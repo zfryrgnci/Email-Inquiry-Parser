@@ -1,3 +1,9 @@
+
+
+## 🔗 Explore the App
+
+[**Click here to explore Email-Inquiry-Parser**](https://zfryrgnci.github.io/Email-Inquiry-Parser)
+
 <div align="center">
   <img src="https://img.shields.io/badge/Status-Active-success.svg?style=for-the-badge" alt="Status" />
   <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License" />
